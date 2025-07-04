@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wolfpack Command Center</title>
+  <style>
+    body {
+      background-color: #111;
+      font-family: monospace;
+      color: #0f0;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px lime;
+    }
+
+    .commander-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .commander-card {
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 16px;
+      border: 2px solid lime;
+      box-shadow: 0 0 15px lime;
+    }
+
+    .commander-card img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 15px lime;
+    }
+
+    .commander-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.4rem;
+    }
+
+    .commander-card button {
+      background: lime;
+      color: #000;
+      border: none;
+      padding: 0.6rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.2s ease;
+    }
+
+    .commander-card button:hover {
+      background: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Wolfpack Command Center</h1>
+
+  <div class="commander-grid">
+
+    <!-- Commander DG -->
+    <div class="commander-card">
+      <img src="/commanders/commander-dg-avatar.png" alt="Commander DG" />
+      <h3>Commander DG</h3>
+      <p>Operations – No fallback. No failure.</p>
+      <button onclick="alert('AMA with Commander DG coming soon.')">Ask Me Anything</button>
+    </div>
+
+    <!-- Placeholder: Uncle Savage -->
+    <div class="commander-card">
+      <img src="/commanders/placeholder.png" alt="Uncle Savage" />
+      <h3>Uncle Savage</h3>
+      <p>Morale & Indoctrination</p>
+      <button disabled>Awaiting Upload</button>
+    </div>
+
+    <!-- Placeholder: Ghostwolf -->
+    <div class="commander-card">
+      <img src="/commanders/placeholder.png" alt="Ghostwolf" />
+      <h3>Ghostwolf</h3>
+      <p>Discipline & Legacy</p>
+      <button disabled>Coming Online</button>
+    </div>
+
+    <!-- Placeholder: Moneyball -->
+    <div class="commander-card">
+      <img src="/commanders/placeholder.png" alt="Moneyball" />
+      <h3>Moneyball</h3>
+      <p>Sports & Tactical Leisure</p>
+      <button disabled>Loading</button>
+    </div>
+
+  </div>
+</body>
+</html>
