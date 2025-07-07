@@ -1,0 +1,27 @@
+name: Auto Deploy Every 30 Minutes
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "Don Grieb"
+          git config --global user.email "don@wolfpackfront.com"
+
+      - name: Create no-op commit
+        run: |
+          git pull origin main
+          git commit --allow-empty -m "🚨 Auto deploy: 30-minute heartbeat"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
